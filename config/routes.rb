@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   namespace :public do
     get 'sessions/new'
     get 'sessions/create'
