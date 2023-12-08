@@ -18,5 +18,12 @@ module PetDiary
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    
+  config.to_prepare do
+    Kaminari.configure do |config|
+      config.page_method_name = :per_page_kaminari
+    end
+  end
+    
   end
 end
